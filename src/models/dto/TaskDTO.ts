@@ -3,6 +3,7 @@ export interface BaseTaskDTO {
   title: string
   content: string
   birth: Date  
+  done:  boolean
 }
 
 export interface TaskDTO extends BaseTaskDTO {

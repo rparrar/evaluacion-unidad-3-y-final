@@ -13,4 +13,5 @@ export const updateTaskSchema: Joi.ObjectSchema<UpdateTaskDTO> = Joi.object().ke
   title: Joi.string(),
   content: Joi.string(),
   birth: Joi.date(),
+  done: Joi.boolean()
 })

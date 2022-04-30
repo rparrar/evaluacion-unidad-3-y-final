@@ -8,7 +8,9 @@ export interface UserDTO extends BaseUserDTO {
 }
 
 export interface CreateUserDTO extends BaseUserDTO {
-  password: string
+  firstName: string
+  lastName: string
+  password: string 
 }
 
 export type UpdateUserDTO = Partial<CreateUserDTO>
