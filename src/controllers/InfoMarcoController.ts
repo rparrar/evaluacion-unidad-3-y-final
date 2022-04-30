@@ -1,6 +1,6 @@
 import { Request, Response } from 'express'
 
-export default class HealthController {
+export default class InfoMarcoController {
   public readonly info = (_req: Request, res: Response) => {
     res.json({
       name: process.env.npm_package_name,
@@ -9,7 +9,7 @@ export default class HealthController {
     })
   }
 
-  public readonly ping = (_req: Request, res: Response) => {
-    res.send('pong')
+  public readonly marco = (_req: Request, res: Response) => {
+    res.send('polo')
   }
 }

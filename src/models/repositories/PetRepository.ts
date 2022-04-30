@@ -22,8 +22,7 @@ export default class PetRepository {
   public readonly findById = async (id: number): Promise<PetDTO | undefined> => {
     const pet = await prisma.pet.findFirst({
       where: {
-        id,
-        userId: this.userId
+        id
       }
     })
 
@@ -45,23 +44,20 @@ export default class PetRepository {
   }
 
   public readonly update = async (id: number, pet: UpdatePetDTO): Promise<void> => {
-    await prisma.pet.updateMany({
+    await prisma.pet.update({
       where: {
-        id,
-        userId: this.userId
+        id
       },
       data: {
         ...pet,
-        birth: pet.birth ? new Date(pet.birth).toISOString() : undefined
       }
     })
   }
 
   public readonly delete = async (id: number): Promise<void> => {
-    await prisma.pet.deleteMany({
+    await prisma.pet.delete({
       where: {
-        id,
-        userId: this.userId
+        id
       }
     })
   }

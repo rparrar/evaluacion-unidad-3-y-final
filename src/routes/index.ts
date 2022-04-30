@@ -1,13 +1,16 @@
 import { Router } from 'express'
 import tokenValidator from '../middlewares/tokenValidator'
 import authRoutes from './authRoutes'
-import healthRoutes from './healthRoutes'
-import petRoutes from './petRoutes'
+import infoMarcoRoutes from './infomarcoRoutes'
+//import petRoutes from './petRoutes'
+import taskRoutes from './taskRoutes'
+
 
 const apiRoutes = Router()
 
-apiRoutes.use('/', healthRoutes)
+apiRoutes.use('/', infoMarcoRoutes)
 apiRoutes.use('/auth', authRoutes)
-apiRoutes.use('/pets', tokenValidator(), petRoutes)
+//apiRoutes.use('/pets', tokenValidator(), petRoutes)
+apiRoutes.use('/tasks', tokenValidator(), taskRoutes)
 
 export default apiRoutes
