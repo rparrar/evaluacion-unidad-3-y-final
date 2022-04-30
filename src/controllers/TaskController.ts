@@ -84,7 +84,7 @@ export default class TaskController {
       }
 
       if (taskFromDb.userId !== user.sub) {
-        res.status(403).json({ message: 'You dont have permissions for reading data of Task' })
+        res.status(403).json({ message: 'You dont have permissions for updating data of Task' })
         return
       }
 
