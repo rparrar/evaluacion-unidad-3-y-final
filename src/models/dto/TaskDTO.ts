@@ -2,7 +2,6 @@ export interface BaseTaskDTO {
   id?: number
   title: string
   content: string
-  birth: Date  
   done:  boolean
 }
 

@@ -36,9 +36,8 @@ export default class TaskRepository {
     const newTask = await prisma.task.create({
       data: {
         ...task,
-        done: false,
-        birth: new Date(task.birth).toISOString(),
-        userId: this.userId
+        userId: this.userId,
+        done: false
       }
     })
 

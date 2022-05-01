@@ -24,7 +24,6 @@ model Task {
   id      Int      @id @default(autoincrement())
   title   String   @db.VarChar(50)
   content String   @db.VarChar(255)
-  birth   DateTime @db.Date()
   done    Boolean  @db.TinyInt()
   user    User?    @relation(fields: [userId], references: [id])
   userId  Int?
